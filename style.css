@@ -1,0 +1,37 @@
+.container {
+  width: 800px;
+  background-color: #ddd;
+  margin: 40px auto;
+  display: grid;
+  grid-template-rows: 150px 150px;
+}
+
+.item {
+  padding: 30px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.item-1 {
+  background-color: orangered;
+}
+
+.item-2 {
+  background-color: violet;
+}
+
+.item-3 {
+  background-color: olivedrab;
+}
+
+.item-4 {
+  background-color: royalblue;
+}
+
+.item-5 {
+  background-color: palevioletred;
+}
+
+.item-6 {
+  background-color: goldenrod;
+}
