@@ -4,8 +4,15 @@
   background-color: #efefef;
   margin: auto;
   display: grid;
-  grid-template-rows: [header-start] 1fr [header-end main-start] 1fr 1fr [main-end box-start] 1fr [box-end footer-start] 1fr [footer-end];
-  grid-template-columns: repeat(4, [col-start]1fr[col-end]);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "header header header header"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar box-1 box-2 box-3"
+    "footer footer footer footer";
+
   grid-gap: 1rem;
 }
 
@@ -18,36 +25,22 @@
 }
 
 .header {
-  grid-column: col-start/col-end 4;
-  grid-row: header-start/header-end;
 }
 
 .sidebar {
-  grid-column: col-start/col-start 2;
-  grid-row: header-end/box-end;
 }
 
 .main {
-  grid-column: col-start 2 / col-end 4;
-  grid-row: header-end/main-end;
 }
 
 .box-1 {
-  grid-column: col-start 2 / col-end 2;
-  grid-row: box-start/footer-start;
 }
 
 .box-2 {
-  grid-column: col-start 3 / col-end 3;
-  grid-row: box-start/box-end;
 }
 
 .box-3 {
-  grid-column: col-start 4 / col-end 4;
-  grid-row: box-start/box-end;
 }
 
 .footer {
-  grid-column: col-start 1 / col-end -1;
-  grid-row: footer-start/footer-end;
 }
