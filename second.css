@@ -8,6 +8,8 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "header header header header"
+    /* if you want one cell empty so can use . 
+    "header header header ." */
     "sidebar main main main"
     "sidebar main main main"
     "sidebar box-1 box-2 box-3"
