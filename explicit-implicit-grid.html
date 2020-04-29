@@ -6,26 +6,26 @@
     <title>Css Grid</title>
     <style>
       .container {
-        width: 600px;
+        width: 800px;
+        /* height: 600px; */
         background-color: #efefef;
+        margin: auto;
         display: grid;
         /* explicit grid */
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: min-content 1fr 1fr minmax(150px, 300px);
+        grid-template-rows: 150px 150px;
         /* grid implicit grid */
         /* grid-auto-flow: column; */
         /* grid-auto-columns: 150px; */
         grid-gap: 1rem;
         /* justify-items:-it allows the items horizontaly */
-        justify-items: center;
+        /* justify-items: center; */
         /* justify-items: start;
         justify-items: end;
         justify-items: stretch; */
         /* align-items:- it allows the items vertically */
-        align-items: center;
-        align-items: stretch;
-        align-items: start;
-        align-items: end;
+        /* justify-content: center;  space-between, space-evenly, space-around, start, end works for horizontally*/
+        /* align-content: center;  space-between, space-evenly, space-around, start, end works for vertically */
       }
 
       .item {
@@ -34,20 +34,13 @@
         color: #fff;
         text-align: center;
       }
-
-      .item-3 {
-        justify-self: center;
-        align-self: center;
-        grid-row: 2/4;
-        grid-column: 1/-1;
-      }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="item">item1</div>
+      <div class="item">Lorem ipsum dolor sit amet.</div>
       <div class="item">item2</div>
-      <div class="item item-3">item3</div>
+      <div class="item">item3</div>
       <div class="item">item4</div>
       <div class="item">item5</div>
       <div class="item">item6</div>
